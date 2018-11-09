@@ -16,11 +16,10 @@ def get_report(analytics):
 
 def main():
 
-  """ analytics = initialize_analyticsreporting()
-  response = get_report(analytics) """
-  x = np.linspace(0, 20, 100)
-  visualize(x)
-  #return response
+  analytics = initialize_analyticsreporting()
+  response = get_report(analytics)
+  df = response_to_df(response)
+  visualize(df)
 
 if __name__ == '__main__':
   main()
