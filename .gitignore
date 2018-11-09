@@ -1,0 +1,5 @@
+secret/
+__pycache__/
+.vscode/
+analyticsreporting.dat
+.DS_Store
