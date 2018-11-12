@@ -16,9 +16,13 @@ def get_report(analytics):
 
 def main():
 
+  ## Initialize
   analytics = initialize_analyticsreporting()
+  ## Get response
   response = get_report(analytics)
+  ## Convert response to dataframe
   df = response_to_df(response)
+  ## Visualise Dataframe (Not standarized)
   visualize(df)
 
 if __name__ == '__main__':
