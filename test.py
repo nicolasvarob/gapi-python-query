@@ -1,4 +1,5 @@
-a = ['enfemredes','mascotas','mercosur','seguroxkm']
+superlist = ['/portal/productos-persona/seguros-vehiculos/seguro-auto-flexible','/portal/productos-persona/seguros-vehiculos/seguroxkm','/portal/productos-persona/seguros-de-vida-y-accidentes/enfermedades-protegidas']
 
-for item in a:
-    print(item)
+for item in superlist:
+    split = item.split('/')
+    print(split[-1])
