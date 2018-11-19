@@ -1,15 +1,17 @@
 import numpy as np
 
-from components.initialize_analytics import initialize_analyticsreporting
+from secret.private import CLIENT_SECRET_PATH
+from config.initialize_analytics import initialize_analyticsreporting
 from components.to_df import response_to_df
 
-from secret.private import CLIENT_SECRET_PATH
-from queries.landing_time_series import request_body
-from components.analyse.anomaly_detection import visualize
+'from components.analyse.timeline_explorer import visualize'
+from queries.time_series_landing import request_body
+from components.analyse.against_average import analyse 
 
-# Get report from Analytics
+# INPUT
+## Query report from Analytics
 def get_report(analytics):
-  # Use the Analytics Service Object to query the Analytics Reporting API V4.
+  ## Use the Analytics Service Object to query the Analytics Reporting API V4.
   return analytics.reports().batchGet(
       body=request_body
   ).execute()
@@ -22,8 +24,8 @@ def main():
   response = get_report(analytics)
   ## Convert response to dataframe
   df = response_to_df(response)
-  ## Visualise Dataframe (Not standarized)
-  visualize(df)
+  ## OUTPUTVisualise Dataframe ()
+  analyse(df)
 
 if __name__ == '__main__':
   main()

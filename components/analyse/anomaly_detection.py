@@ -5,12 +5,14 @@ import plotly
 import plotly.graph_objs as go
 
 def visualize(df):
+    ## To date
     df['ga:date'] = pd.to_datetime(df['ga:date'])
     df.reset_index()
-    unique_values_to_rename = df['ga:pagePath'].unique().tolist()
 
     ## Rename page URL to single string
     ### As every page name is at the end of the URL, split and keep the end so it can be used to replace.
+    unique_values_to_rename = df['ga:pagePath'].unique().tolist()    
+    
     for item in unique_values_to_rename:
         split = item.split('/')
         
