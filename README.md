@@ -1,5 +1,9 @@
-# Quering Interface for Google Analytics API
-It get the response and transform it to DataFrame
+# Query interface for Google Analytics API
+Easily uses the Google Reporting API without the need of a service account, allowing custom queries for your reporting needs. 
+Transforms the response of the API to Dataframe for easier manipulation. 
+
+## How it works ? 
+
 
 ## How it works ? 
 
