@@ -1,3 +1,11 @@
 # Quering Interface for Google Analytics API
 
-## Get the response and transform it to DataFrame
+## It get the response and transform it to DataFrame
+
+### Initialize Analytics 
+
+### Get Google Analytics API V4 Report 
+
+### Transform Reponse to DataFrame
+
+### Output Result
