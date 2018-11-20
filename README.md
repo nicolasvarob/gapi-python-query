@@ -1,6 +1,7 @@
 # Quering Interface for Google Analytics API
+It get the response and transform it to DataFrame
 
-## It get the response and transform it to DataFrame
+## How it works ? 
 
 ### Initialize Analytics 
 
