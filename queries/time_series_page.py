@@ -9,14 +9,14 @@ request_body = {
           'viewId': VIEW_ID,
           'dateRanges': [{'startDate': config['date_start'], 'endDate': config['date_end']}],
           'metrics': [{'expression': 'ga:uniquePageviews'}],
-          'dimensions': [{'name': 'ga:date'},{'name':'ga:browser'},{'name':'ga:pagePath'}],
+          'dimensions': [{'name': 'ga:date'},{'name':'ga:browser'}],
            "dimensionFilterClauses": [
               {
                 "operator":"AND",
                 "filters": [
                     {
                     "dimensionName": "ga:pagePath",
-                    "expressions": [".*/portal/productos-persona(/seguros-vehiculos/(mercosur|seguroxkm|seguro-auto-flexible|seguro-obligatorio-soap)|/seguros-de-vida-y-accidentes/(enfermedades-protegidas|seguro-mi-mascota|asistencia-en-viaje))$"]
+                    "expressions": ["^/portal/atencion-cliente/pagar-tus-cuotas$"]
                   },
                   {
                     "dimensionName": "ga:sourceMedium",

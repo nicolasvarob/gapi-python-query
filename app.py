@@ -6,7 +6,7 @@ from components.to_df import response_to_df
 
 'from components.analyse.timeline_explorer import visualize'
 from queries.time_series_landing import request_body
-from components.analyse.against_average import analyse 
+from components.analyse.timeseries_analysis import analyse as analysis
 
 # INPUT
 ## Query report from Analytics
@@ -25,7 +25,7 @@ def main():
   ## Convert response to dataframe
   df = response_to_df(response)
   ## OUTPUTVisualise Dataframe ()
-  analyse(df)
+  analysis(df)
 
 if __name__ == '__main__':
   main()
