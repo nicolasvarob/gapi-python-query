@@ -5,8 +5,8 @@ from config.initialize_analytics import initialize_analyticsreporting
 from components.to_df import response_to_df
 
 'from components.analyse.timeline_explorer import visualize'
-from queries.time_series_landing import request_body
-from components.analyse.timeseries_analysis import analyse as analysis
+from queries.time_series_source import request_body
+from components.analyse.correlation.cross_correlation import analyse as analysis
 
 # INPUT
 ## Query report from Analytics

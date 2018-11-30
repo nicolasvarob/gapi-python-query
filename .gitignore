@@ -9,3 +9,5 @@ __pycache__/
 
 # Others
 test.py
+external_data/
+*.csv
